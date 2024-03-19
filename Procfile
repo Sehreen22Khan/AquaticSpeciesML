@@ -1,1 +1,1 @@
-web: gunicorn app:aquatic-species-ml
+web: gunicorn wsgi:app
