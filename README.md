@@ -1,5 +1,8 @@
 # Aquatic Life Species Prediction: A Data-Driven Exploration 🌊🐟🔍
 
+Heroku App: Aquatic Species Prediction Model (fish-species-ml-37e29b784987.herokuapp.com)
+
+
 ## Abstract
 The Aquatic Life Species Prediction project aims to apply machine learning techniques to predict either the weight or species classification of fish. The dataset contains measurements such as weight, length dimensionslength, height, and width. We explore regression and classification approaches, develop a frontend interface, and deploy the model on Heroku.
 
