@@ -15,27 +15,27 @@ model = pickle.load(open(filename, "rb"))
 def main():
 
     if request.method == "POST":
-        # Extract the input from the form
-        temperature = request.form.get("temperature")
-        humidity = request.form.get("humidity")
-        windspeed = request.form.get("windspeed")
+        # # Extract the input from the form
+        # temperature = request.form.get("temperature")
+        # humidity = request.form.get("humidity")
+        # windspeed = request.form.get("windspeed")
 
-        # Create DataFrame based on input
-        input_variables = pd.DataFrame([[temperature, humidity, windspeed]],
-                                       columns=['temperature', 'humidity', 'windspeed'],
-                                       dtype=float,
-                                       index=['input'])
+        # # Create DataFrame based on input
+        # input_variables = pd.DataFrame([[temperature, humidity, windspeed]],
+        #                                columns=['temperature', 'humidity', 'windspeed'],
+        #                                dtype=float,
+        #                                index=['input'])
 
-        # Get the model's prediction
-        # Given that the prediction is stored in an array we simply extract by indexing
-        prediction = model.predict(input_variables)[0]
+        # # Get the model's prediction
+        # # Given that the prediction is stored in an array we simply extract by indexing
+        # prediction = model.predict(input_variables)[0]
     
         # We now pass on the input from the from and the prediction to the index page
         return render_template("index.html",
-                                     original_input={'Temperature':temperature,
-                                                     'Humidity':humidity,
-                                                     'Windspeed':windspeed},
-                                     result=prediction
+                                    #  original_input={'Temperature':temperature,
+                                    #                  'Humidity':humidity,
+                                    #                  'Windspeed':windspeed},
+                                    #  result=prediction
                                      )
     # If the request method is GET
     return render_template("index.html")
