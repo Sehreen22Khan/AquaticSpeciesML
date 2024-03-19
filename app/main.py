@@ -46,7 +46,7 @@ def main():
                                                      'Length3': length3,
                                                      'Height': height,
                                                      'Width': width},
-                                     result=prediction
+                                     result=prediction[0]
                                      )
     # If the request method is GET
     return render_template("index.html")
