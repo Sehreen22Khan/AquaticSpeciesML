@@ -17,7 +17,7 @@ model = pickle.load(open(filename, "rb"))
 def main():
 
     if request.method == "POST":
-        loaded_model = pickle.load(open('./models/finalized_model.sav', 'rb'))
+        loaded_model = pickle.load(open(filename, 'rb'))
 
         # Extract the input from the form
         weight = request.form.get("weight")
